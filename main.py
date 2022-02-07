@@ -62,6 +62,7 @@ def run_python_challenge():
         "Language": hash_languages,
         "Time [s]": times
     })
+    df.to_json(path_or_buf='data.json')
 
     time_data = {'total': df['Time [s]'].sum().round(2), 'mean': df['Time [s]'].mean().round(2),
                  'min': df['Time [s]'].min().round(2), 'max': df['Time [s]'].max().round(2)}
