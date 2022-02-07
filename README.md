@@ -25,4 +25,6 @@ pip install -e .
 ```
 
 ## Execution [Linux]
-located in project run command python3 main.py or in pycharm run main
+located in project run command _python3 index.py_ or in pycharm run index
+
+this will run the application on port http://127.0.0.1:5000/ 

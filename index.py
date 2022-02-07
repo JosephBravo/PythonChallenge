@@ -10,12 +10,16 @@ import logging
 from db import *
 from example_data import *
 
+from flask import Flask, render_template
+app = Flask(__name__)
+
+
 DEBUGGING = int(os.environ.get('DEBUGGING', 10)) == 10
 logger = logging.getLogger()
 logger.setLevel(int(DEBUGGING))
 http = urllib3.PoolManager()
 
-
+@app.route("/")
 def run_python_challenge():
     regions = []
     countries = []
@@ -73,6 +77,11 @@ def run_python_challenge():
 
     print("Table to json", df.to_json(orient='columns'))
 
+    table_to_html = [df.to_html(index=False, justify='center', classes='table', )]
+
+    return render_template('index.html', tables=table_to_html, statistics=time_data)
+
 
 if __name__ == '__main__':
+    app.run()
     run_python_challenge()
