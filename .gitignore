@@ -1,0 +1,9 @@
+# .gitignore
+__pycache__/
+pychallenge
+*.pyc
+htmlcov/
+dist/
+build/
+*.egg-info/
+*.json

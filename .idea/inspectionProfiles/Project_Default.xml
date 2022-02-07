@@ -1,0 +1,17 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="rest_api.echo.users.models.user.echo" />
+          <option value="rest_api.echo.users.tests.test.echo" />
+          <option value="rest_api.echo.organizations.models.memberships.echo" />
+          <option value="echo.organizations.models.organizations.Organization.objects" />
+          <option value="echo.organizations.models.invitations.django_enum_choices" />
+          <option value="echo.organizations.serializers.invitations.rest_enumfield" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
